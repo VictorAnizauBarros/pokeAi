@@ -27,6 +27,7 @@ export default function App() {
         const pokemon = {
           nome: json.name,
           img: json.sprites.other["official-artwork"].front_default,
+          peso: json.weight,
         };
         setPokemonEscolhido(pokemon);
       })
@@ -74,17 +75,39 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: {flex: 1, backgroundColor: '#fff'},
+  container: { flex: 1, backgroundColor: "#fff" },
 
-  topo: {height: 100, padding: 20, paddingTop: 40, marginBottom: 20, backgroundColor: '#e73e33'},
-  topoTitulo: {fontSize: 22, marginBottom: 10, color: '#fff', textAlign: 'center'},
+  topo: {
+    height: 100,
+    padding: 20,
+    paddingTop: 40,
+    marginBottom: 20,
+    backgroundColor: "#e73e33",
+  },
+  topoTitulo: {
+    fontSize: 22,
+    marginBottom: 10,
+    color: "#fff",
+    textAlign: "center",
+  },
 
-  cardContainer: {borderWidth: 1, borderColor: '#d5d5d5', borderRadius: 4, marginBottom: 10, marginHorizontal: 20, padding: 10}, 
-  cardTitle: {fontSize: 22, marginBottom: 20, textAlign: 'center', color:'#656565'},
+  cardContainer: {
+    borderWidth: 1,
+    borderColor: "#d5d5d5",
+    borderRadius: 4,
+    marginBottom: 10,
+    marginHorizontal: 20,
+    padding: 10,
+  },
+  cardTitle: {
+    fontSize: 22,
+    marginBottom: 20,
+    textAlign: "center",
+    color: "#656565",
+  },
 
-  pokemonBox: {alignItems: 'center'},
-  pokemonNome: {fontSize: 22},
-  pokemonPeso: {fontSize: 18},
-  pokemonImg: {width: 150, height: 150,}
+  pokemonBox: { alignItems: "center" },
+  pokemonNome: { fontSize: 22 },
+  pokemonPeso: { fontSize: 18 },
+  pokemonImg: { width: 150, height: 150 },
 });
-
